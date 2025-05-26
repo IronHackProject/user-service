@@ -21,7 +21,7 @@ public class UserController {
     }
 
     @GetMapping("/findUser")
-    public ResponseEntity<?> findUser(@RequestParam FindUserByEmailRequestDTO dto) {
+    public ResponseEntity<?> findUser(@RequestBody @Valid FindUserByEmailRequestDTO dto) {
         return userService.findUserByEmail(dto);
     }
 
