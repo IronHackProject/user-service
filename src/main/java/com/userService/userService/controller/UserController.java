@@ -20,6 +20,10 @@ public class UserController {
     public ResponseEntity<?> createUser(@RequestBody @Valid CreateUserRequestDTO dto) {
         return userService.createUser(dto);
     }
+    @PutMapping("/update/{id}")
+    public ResponseEntity<?> updateUser(@PathVariable Long id, @RequestBody @Valid CreateUserRequestDTO dto) {
+        return userService.updateUser(id, dto);
+    }
 
     @GetMapping("/findUser")
     public ResponseEntity<?> findUser(@RequestBody @Valid FindUserByEmailRequestDTO dto) {
@@ -31,6 +35,7 @@ public class UserController {
     public ResponseEntity<User> findUserByEmailClient(@PathVariable String email) {
         return userService.findUserByEmailOrderService(email);
     }
+
 
 
 }

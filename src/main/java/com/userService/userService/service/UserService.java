@@ -5,6 +5,7 @@ import com.userService.userService.dto.FindUserByEmailRequestDTO;
 import com.userService.userService.exceptions.customExceptions.UserExceptions;
 import com.userService.userService.model.User;
 import com.userService.userService.repository.UserRepository;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
@@ -44,5 +45,18 @@ public class UserService {
     public ResponseEntity<User> findUserByEmailOrderService(String email) {
         Optional<User> user = userRepository.findByEmail(email);
         return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    public ResponseEntity<?> updateUser(Long id, @Valid CreateUserRequestDTO dto) {
+        Optional<User> userOptional = userRepository.findById(id);
+        if (userOptional.isEmpty()) {
+            throw new UserExceptions("User not found with id: " + id);
+        }
+        User user = userOptional.get();
+        user.setName(dto.getName());
+        user.setEmail(dto.getEmail());
+        user.setSurname(dto.getSurname());
+        User updatedUser = userRepository.save(user);
+        return ResponseEntity.ok(updatedUser);
     }
 }
