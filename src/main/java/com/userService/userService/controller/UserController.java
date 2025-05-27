@@ -30,6 +30,11 @@ public class UserController {
         return userService.findUserByEmail(dto);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
+        return userService.deleteUser(id);
+    }
+
     // use FeingClient
     @GetMapping("/find/{email}")
     public ResponseEntity<User> findUserByEmailClient(@PathVariable String email) {

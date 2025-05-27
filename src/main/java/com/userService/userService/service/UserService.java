@@ -59,4 +59,13 @@ public class UserService {
         User updatedUser = userRepository.save(user);
         return ResponseEntity.ok(updatedUser);
     }
+
+    public ResponseEntity<?> deleteUser(Long id) {
+        Optional<User> userOptional = userRepository.findById(id);
+        if (userOptional.isEmpty()) {
+            throw new UserExceptions("User not found with id: " + id);
+        }
+        userRepository.delete(userOptional.get());
+        return ResponseEntity.ok("User deleted successfully");
+    }
 }
