@@ -40,4 +40,9 @@ public class UserService {
         }
         return ResponseEntity.ok(user.get());
     }
+
+    public ResponseEntity<User> findUserByEmailOrderService(String email) {
+        Optional<User> user = userRepository.findByEmail(email);
+        return user.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
 }
