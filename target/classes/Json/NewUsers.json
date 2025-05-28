@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Abelardo",
+    "surname": "de Sotomayor Rodriguez",
+    "email": "abelardo.desotomayor@example.es"
+  },
+  {
+    "name": "Lucía",
+    "surname": "Pérez Gómez",
+    "email": "lucia.perez@example.es"
+  },
+  {
+    "name": "Carlos",
+    "surname": "Fernández Ruiz",
+    "email": "carlos.fernandez@example.es"
+  },
+  {
+    "name": "María",
+    "surname": "López Martínez",
+    "email": "maria.lopez@example.es"
+  },
+  {
+    "name": "Javier",
+    "surname": "García Sánchez",
+    "email": "javier.garcia@example.es"
+  },
+  {
+    "name": "Elena",
+    "surname": "Moreno Ortega",
+    "email": "elena.moreno@example.es"
+  },
+  {
+    "name": "Miguel",
+    "surname": "Ramírez Castro",
+    "email": "miguel.ramirez@example.es"
+  },
+  {
+    "name": "Sandra",
+    "surname": "Núñez Díaz",
+    "email": "sandra.nunez@example.es"
+  },
+  {
+    "name": "Diego",
+    "surname": "Serrano León",
+    "email": "diego.serrano@example.es"
+  },
+  {
+    "name": "Laura",
+    "surname": "Jiménez Romero",
+    "email": "laura.jimenez@example.es"
+  }
+]
