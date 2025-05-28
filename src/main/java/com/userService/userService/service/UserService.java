@@ -34,7 +34,7 @@ public class UserService {
         return ResponseEntity.ok(savedUser);
     }
 
-    public ResponseEntity<?> findUserByEmail(FindUserByEmailRequestDTO dto) {
+    public ResponseEntity<User> findUserByEmail(FindUserByEmailRequestDTO dto) {
         Optional<User> user = userRepository.findByEmail(dto.getEmail());
         if (user.isEmpty()) {
             throw new UserExceptions("User not found with email: " + dto.getEmail());
