@@ -1,0 +1,9 @@
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/UserServiceApplication.java
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/controller/UserController.java
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/dto/CreateUserRequestDTO.java
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/dto/FindUserByEmailRequestDTO.java
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/exceptions/GlobalExceptionHandler.java
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/exceptions/customExceptions/UserExceptions.java
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/model/User.java
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/repository/UserRepository.java
+/home/planetweb/IdeaProjects/e-commerce/user-service/src/main/java/com/userService/userService/service/UserService.java
