@@ -63,9 +63,6 @@ Incluye:
    ```
 
 
-## 	📁 EndPoints
-- Puedes ver todos los endPoints en `http://localhost:8081/api/user` una vez que el servicio esté corriendo.
-
  
 ## 🧪 Postman
 
