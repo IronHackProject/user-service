@@ -9,6 +9,7 @@ import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -67,5 +68,13 @@ public class UserService {
         }
         userRepository.delete(userOptional.get());
         return ResponseEntity.ok("User deleted successfully");
+    }
+
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users= userRepository.findAll();
+        if (users.isEmpty()) {
+            throw new UserExceptions("No users found");
+        }
+        return ResponseEntity.ok(users);
     }
 }
